@@ -8,6 +8,8 @@ if status is-interactive
 		export FZF_DEFAULT_COMMAND='fd -H -E .git .'
     end
 
-	set -g fish_greeting 
+	set -gx fish_greeting 
+	set -gx EDITOR nvim
+	set -gx PAGER bat
     fish_add_path $HOME/.cargo/bin $HOME/.local/share/bob/nvim-bin $HOME/.cabal/bin $HOME/.ghcup/bin
 end
