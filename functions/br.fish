@@ -1,4 +1,1 @@
-function br --description 'alias br br -h'
- command br -h $argv
-        
-end
+/home/user/.local/share/broot/launcher/fish/br.fish
