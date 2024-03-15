@@ -1,7 +1,7 @@
 if status is-interactive
-
     if command -q tmux && [ "$TERM" != "tmux" ] && [ -z "$TMUX" ]
-		tmux attach
+		tmux attach 2> /dev/null || tmux new-session -s user
+		# tmux attach
     end
 
     if command -q fd
@@ -10,6 +10,6 @@ if status is-interactive
 
 	set -gx fish_greeting 
 	set -gx EDITOR nvim
-	set -gx PAGER bat
+	set -gx PAGER "bat"
     fish_add_path $HOME/.cargo/bin $HOME/.local/share/bob/nvim-bin $HOME/.cabal/bin $HOME/.ghcup/bin
 end
