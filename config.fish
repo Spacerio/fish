@@ -12,6 +12,6 @@ if status is-interactive
 
 	set -gx fish_greeting 
 	set -gx EDITOR nvim
-	set -gx PAGER "bat"
+	set -gx PAGER "nvim +Man!"
     fish_add_path $HOME/.cargo/bin $HOME/.local/share/bob/nvim-bin $HOME/.cabal/bin $HOME/.ghcup/bin
 end
