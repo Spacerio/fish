@@ -1,7 +1,9 @@
 if status is-interactive
-    if command -q tmux && [ "$TERM" != "tmux" ] && [ -z "$TMUX" ]
+	function ta -d 'attach or create new session'
 		tmux attach 2> /dev/null || tmux new-session -s user
-		# tmux attach
+	end
+    if command -q tmux && [ "$TERM" != "tmux" ] && [ -z "$TMUX" ]
+		ta
     end
 
     if command -q fd
