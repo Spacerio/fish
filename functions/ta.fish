@@ -1,3 +1,8 @@
 function ta --description 'attach or create new session'
-tmux attach 2> /dev/null || tmux new-session -s user
+	if set -q argv[1]
+		set session argv[1]
+	else 
+		set session user
+	end
+	tmux attach $session 2> /dev/null || tmux new-session -s $session
 end
