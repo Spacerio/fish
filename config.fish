@@ -12,6 +12,8 @@ if status is-interactive
 
 	set -gx fish_greeting 
 	set -gx EDITOR nvim
+	set -gx VISUAL nvim
 	set -gx PAGER "nvim +Man!"
+	set -q nvm_default_version; or set -U nvm_default_version latest
     fish_add_path $HOME/.cargo/bin $HOME/.local/share/bob/nvim-bin $HOME/.cabal/bin $HOME/.ghcup/bin
 end
